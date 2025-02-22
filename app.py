@@ -1,23 +1,43 @@
-#%%
 import json
-import yaml
 import pandas as pd
-import plotly.graph_objects as go
-from map_layout import MapLayout
+import plotly.express as px
+import dash
+from dash import dcc, html
+from dash.dependencies import Input, Output
+import webbrowser
 
-layout = MapLayout()
-
-# サービスファイルの読み込み
-with open('app_list.json', 'r', encoding='utf-8') as f:
+# 📂 JSON ファイルを読み込む
+with open("app_list.json", "r", encoding="utf-8") as f:
     data = json.load(f)
-df = pd.DataFrame(data["services"])
 
-# mapping_matrixの作成
-fig = go.Figure(layout=layout.set_layout())
-fig.add_trace(layout.set_scatter(df))
+df = pd.DataFrame(data["tools"])
 
-fig.show()
-#%% 
-# PNGファイルを作成
-# fig.write_image("images/med_app_scatter.png",engine='orca')
+# 📊 散布図を作成
+fig = px.scatter(df, x="X", y="Y", text="name", hover_data=["url"])
+fig.update_traces(textposition="top center", marker=dict(size=12, color="blue"))
 
+# 🌐 Dash アプリを作成
+app = dash.Dash(__name__)
+
+app.layout = html.Div([
+    dcc.Graph(id="scatter-plot", figure=fig)
+])
+
+# 🖱️ クリックイベントを処理
+@app.callback(
+    Output("scatter-plot", "figure"),
+    Input("scatter-plot", "clickData")
+)
+def display_click_data(clickData):
+    if clickData:
+        point_index = clickData["points"][0]["pointIndex"]
+        url = df.iloc[point_index]["url"]
+        print(f"Opening: {url}")
+        webbrowser.open(url)  # クリックしたらブラウザでURLを開く
+    return fig
+
+# 🚀 アプリを実行
+if __name__ == "__main__":
+    app.run_server(debug=False,
+                host='0.0.0.0',
+                port=8080)
