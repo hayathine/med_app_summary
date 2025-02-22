@@ -1,0 +1,116 @@
+{
+    "tools": [
+        {
+            "name": "ウィズウェルネス",
+            "X": 0,
+            "Y": 0,
+            "url": "https://www.withwellness.com/pr/",
+            "category": "健康管理",
+            "type": "商用"
+        },
+        {
+            "name": "医'sアシスト",
+            "X": 1,
+            "Y": 1,
+            "url": "https://pr.e-s-assist.com/lp/202409/?utm_source=yahoo_202410&utm_midium=listing&utm_campaign=y_monshin_01&yclid=YSS.1001179636.EAIaIQobChMIgq3d49yaiwMVNxN7Bx0RbAxDEAAYASAAEgJ4y_D_BwE",
+            "category": "業務効率化",
+            "type": "商用"
+        },
+        {
+            "name": "今日の問診票",
+            "X": 2,
+            "Y": 2,
+            "url": "https://www.premedi.co.jp/konnichi-no-monshinhyo/function/",
+            "category": "問診",
+            "type": "商用"
+        },
+        {
+            "name": "GRID",
+            "X": 3,
+            "Y": 3,
+            "url": "https://www.kompath.com/GRID/",
+            "category": "診断補助",
+            "type": "商用"
+        },
+        {
+            "name": "rapidai",
+            "X": 4,
+            "Y": 4,
+            "url": "https://www.rapidai.com/rapid-ncct",
+            "category": "診断補助",
+            "description": "脳卒中の手術適応判断"
+        },
+        {
+            "name": "EndoBRAIN®-X",
+            "X": 5,
+            "Y": 5,
+            "url": "https://www.cybernet.co.jp/medical-imaging/products/endobrain/",
+            "category": "診断補助",
+            "description": "内視鏡診画像断支援ソフトウェア（NBI（狭帯域光観察）モード）",
+            "type": "商用"
+        },
+        {
+            "name": "EIRL",
+            "X": 6,
+            "Y": 6,
+            "url": "https://eirl.ai/ja/",
+            "category": "診断補助",
+            "description": "画像読影支援",
+            "type": "商用"
+        },
+        {
+            "name": "クラウドヘルスケア",
+            "X": 7,
+            "Y": 7,
+            "url": "https://ari-jp.com/service/cloudhealthcare/",
+            "category": "問診",
+            "description": "対話的診療科推論クラウドAIシステム",
+            "type": "開発段階"
+        },
+        {
+            "name": "Join",
+            "X": 8,
+            "Y": 8,
+            "url": "https://www.allm.net/join/",
+            "category": "コミュニケーション",
+            "description": "医療関係者間コミュニケーションアプリ",
+            "type": "商用"
+        },
+        {
+            "name": "MySOS",
+            "X": 9,
+            "Y": 9,
+            "url": "https://www.allm.net/mysos/",
+            "category": "健康管理",
+            "description": "健康・治療生活サポートアプリ 日々の健康管理から災害時の医療・行政支援まで幅広く",
+            "type": "商用"
+        },
+        {
+            "name": "Q助",
+            "X": 10,
+            "Y": 10,
+            "url": "https://www.fdma.go.jp/mission/enrichment/appropriate/appropriate003.html",
+            "category": "問診",
+            "description": "緊急度に応じた必要な対応を表示",
+            "type": "無料"
+        },
+        {
+            "name": "症状検索アプリ ユビー",
+            "X": 11,
+            "Y": 11,
+            "url": "https://ubie.app",
+            "category": "問診",
+            "description": "一問一答形式で病気や対処法、受診すべき診療科を特定",
+            "type": "無料"
+        },
+        {
+            "name": "HOKUTO",
+            "X": 12,
+            "Y": 12,
+            "url": "https://hokuto.app/",
+            "category": "業務効率化",
+            "description": "エビデンスに基づいた情報への素早いアクセスを可能にする臨床支援アプリ",
+            "type": "無料"
+        }
+    ]
+}
