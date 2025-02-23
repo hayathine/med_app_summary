@@ -40,7 +40,7 @@ class MapLayout:
             text=df["name"],
             textposition="top center",
             marker=dict(
-                size=20,
+                size=10,
                 symbol=df["target"].map(self.set_symbols()),
                 color=df["category"].map(self.set_categories())
             ),
