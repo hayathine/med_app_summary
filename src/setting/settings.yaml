@@ -1,0 +1,79 @@
+# annotations等のプロパティを記述
+
+annotations:
+  - x: 0.5
+    y: 1.05
+    xref: "paper"
+    yref: "paper"
+    text: "医療従事者の代替"
+    showarrow: False
+    textangle: 0
+    font:
+      size: 20
+  - x: 0.5
+    y: -0.05
+    xref: "paper"
+    yref: "paper"
+    text: "医療従事者の補助・支援"
+    showarrow: False
+    textangle: 0
+    font:
+      size: 20
+  - x: -0.02
+    y: 0.5
+    xref: "paper"
+    yref: "paper"
+    text: "一般ユーザー向け"
+    showarrow: False
+    textangle: 90
+    font:
+      size: 20
+  - x: 1.02
+    y: 0.5
+    xref: "paper"
+    yref: "paper"
+    text: "医療従事者向け"
+    showarrow: False
+    textangle: 90
+    font:
+      size: 20
+
+# axis
+xaxis:
+  range: [-50, 50]
+  zeroline: True
+  zerolinecolor: "#969696"
+  zerolinewidth: 2 
+  showline: True # 軸線の表示
+  linecolor: "#969696" # 軸線の色
+  linewidth: 2 # 軸線の太さ
+  showgrid: False # グリッドの表示
+  showticklabels: False # 目盛りの表示
+  # title: "アプローチ"
+yaxis:
+  range: [-50, 50] 
+  zeroline: True # 原点線の表示
+  zerolinecolor: "#969696"
+  zerolinewidth: 2
+  showline: True # 軸線の表示
+  linecolor: "#969696" # 軸線の色
+  linewidth: 2 # 軸線の太さ
+  showgrid: False # グリッドの表示
+  showticklabels: False # 目盛りの表示
+  # title: "ターゲット"
+
+# カテゴリと色の対応を定義
+categories:
+  "健康管理": "blue"
+  "業務効率化": "green"
+  "問診": "red"
+  "診断補助": "purple"
+  "コミュニケーション": "orange"
+  "指標": "gold"
+
+# ターゲットによる表記の定義
+targets:
+  "一般ユーザー": "triangle-left"
+  "医療従事者": "triangle-right"
+  "両者": "diamond"
+  "基準": "star"

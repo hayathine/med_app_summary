@@ -2,43 +2,52 @@
     "services": [
         {
             "name": "ウィズウェルネス",
-            "X": 0,
-            "Y": 0,
+            "X": -40,
+            "Y": -40,
             "url": "https://www.withwellness.com/pr/",
             "category": "健康管理",
-            "type": "商用"
+            "description": "蓄積された健康データから、ご自身やご家族の健康状態を把握できます。さらに健康維持のためのご提案、お手伝いもいたします。",
+            "type": "商用",
+            "target": "一般ユーザー"
         },
         {
             "name": "医'sアシスト",
-            "X": 1,
-            "Y": 1,
+            "X": 40,
+            "Y": -40,
             "url": "https://pr.e-s-assist.com/lp/202409/?utm_source=yahoo_202410&utm_midium=listing&utm_campaign=y_monshin_01&yclid=YSS.1001179636.EAIaIQobChMIgq3d49yaiwMVNxN7Bx0RbAxDEAAYASAAEgJ4y_D_BwE",
             "category": "業務効率化",
-            "type": "商用"
+            "description": "検査結果やメッセージを直接患者さんに送信でき、Web予約やWeb問診、診療支援などで、クリニックの「業務効率化」と「患者さんとのつながり」をいつまでも継続させます。",
+            "type": "商用",
+            "target": "医療従事者"
         },
         {
             "name": "今日の問診票",
-            "X": 2,
-            "Y": 2,
+            "X": -40,
+            "Y": -10,
             "url": "https://www.premedi.co.jp/konnichi-no-monshinhyo/function/",
             "category": "問診",
-            "type": "商用"
+            "description": "AI診療支援はAI問診票と電子教科書がシームレスに合わさり、初診カルテの作成の時間を半分以下にする効果があるだけでなく、著名医師の電子教科書を確認しながら診療をすることが可能になります。また、問診票のカスタマイズも可能で、オンプレミスとクラウドの両方の運用が可能であるため様々な臨床の現場を手伝うことが可能です。",
+            "type": "商用",
+            "target": "両者"
         },
         {
             "name": "GRID",
-            "X": 3,
-            "Y": 3,
+            "X": 45,
+            "Y": 35,
             "url": "https://www.kompath.com/GRID/",
             "category": "診断補助",
-            "type": "商用"
+            "type": "商用",
+            "target": "医療従事者"
         },
         {
             "name": "rapidai",
-            "X": 4,
-            "Y": 4,
+            "X": 45,
+            "Y": 45,
             "url": "https://www.rapidai.com/rapid-ncct",
             "category": "診断補助",
-            "description": "脳卒中の手術適応判断"
+            "description": "脳卒中の手術適応判断",
+            "type": "商用",
+            "target": "医療従事者"
         },
         {
             "name": "EndoBRAIN®-X",
@@ -47,7 +56,8 @@
             "url": "https://www.cybernet.co.jp/medical-imaging/products/endobrain/",
             "category": "診断補助",
             "description": "内視鏡診画像断支援ソフトウェア（NBI（狭帯域光観察）モード）",
-            "type": "商用"
+            "type": "商用",
+            "target": "医療従事者"
         },
         {
             "name": "EIRL",
@@ -56,7 +66,8 @@
             "url": "https://eirl.ai/ja/",
             "category": "診断補助",
             "description": "画像読影支援",
-            "type": "商用"
+            "type": "商用",
+            "target": "医療従事者"
         },
         {
             "name": "クラウドヘルスケア",
@@ -65,7 +76,8 @@
             "url": "https://ari-jp.com/service/cloudhealthcare/",
             "category": "問診",
             "description": "対話的診療科推論クラウドAIシステム",
-            "type": "開発段階"
+            "type": "開発段階",
+            "target": "一般ユーザー"
         },
         {
             "name": "Join",
@@ -74,7 +86,8 @@
             "url": "https://www.allm.net/join/",
             "category": "コミュニケーション",
             "description": "医療関係者間コミュニケーションアプリ",
-            "type": "商用"
+            "type": "商用",
+            "target": "医療従事者"
         },
         {
             "name": "MySOS",
@@ -83,7 +96,8 @@
             "url": "https://www.allm.net/mysos/",
             "category": "健康管理",
             "description": "健康・治療生活サポートアプリ 日々の健康管理から災害時の医療・行政支援まで幅広く",
-            "type": "商用"
+            "type": "商用",
+            "target": "一般ユーザー"
         },
         {
             "name": "Q助",
@@ -92,7 +106,8 @@
             "url": "https://www.fdma.go.jp/mission/enrichment/appropriate/appropriate003.html",
             "category": "問診",
             "description": "緊急度に応じた必要な対応を表示",
-            "type": "無料"
+            "type": "無料",
+            "target": "一般ユーザー"
         },
         {
             "name": "症状検索アプリ ユビー",
@@ -101,7 +116,8 @@
             "url": "https://ubie.app",
             "category": "問診",
             "description": "一問一答形式で病気や対処法、受診すべき診療科を特定",
-            "type": "無料"
+            "type": "無料",
+            "target": "一般ユーザー"
         },
         {
             "name": "HOKUTO",
@@ -110,7 +126,8 @@
             "url": "https://hokuto.app/",
             "category": "業務効率化",
             "description": "エビデンスに基づいた情報への素早いアクセスを可能にする臨床支援アプリ",
-            "type": "無料"
+            "type": "無料",
+            "target": "医療従事者"
         },
         {
             "name": "LafLabo",
@@ -119,7 +136,24 @@
             "url": "https://web.laflabo.com/",
             "category": "業務効率化",
             "description": "医療従事者のための文書作成クラウドサービス",
-            "type": "無償"
+            "type": "無償",
+            "target": "医療従事者"
+        },
+        {
+            "name": "医療従事者",
+            "X": 40,
+            "Y": 40,
+            "category": "指標",
+            "description": "基準",
+            "target": "基準"
+        },
+        {
+            "name": "一般ユーザー",
+            "X": -40,
+            "Y": 0,
+            "category": "指標",
+            "description": "基準",
+            "target": "基準"
         }
     ]
 }
