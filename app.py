@@ -2,7 +2,6 @@
 import json
 import pandas as pd
 import plotly.graph_objects as go
-import webbrowser
 
 # jsonファイルの読み込み
 # app_list.jsonファイルを読み込む
