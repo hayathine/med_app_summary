@@ -9,7 +9,7 @@ import webbrowser
 with open('app_list.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
-df = pd.DataFrame(data["tools"])
+df = pd.DataFrame(data["services"])
 
 # layoutの設定
 layout = go.Layout(
@@ -50,5 +50,5 @@ fig.add_trace(go.Scatter(
 ))
 #%% 
 # PNGファイルを作成
-fig.write_image("med_app_scatter.png")
+fig.write_image("images/med_app_scatter.png",engine='orca')
 
