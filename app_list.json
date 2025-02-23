@@ -1,5 +1,5 @@
 {
-    "tools": [
+    "services": [
         {
             "name": "ウィズウェルネス",
             "X": 0,
@@ -111,6 +111,15 @@
             "category": "業務効率化",
             "description": "エビデンスに基づいた情報への素早いアクセスを可能にする臨床支援アプリ",
             "type": "無料"
+        },
+        {
+            "name": "LafLabo",
+            "X": 13,
+            "Y": 13,
+            "url": "https://web.laflabo.com/",
+            "category": "業務効率化",
+            "description": "医療従事者のための文書作成クラウドサービス",
+            "type": "無償"
         }
     ]
 }
