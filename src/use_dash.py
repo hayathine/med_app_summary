@@ -1,20 +1,23 @@
 import json
 import pandas as pd
-import plotly.express as px
 import dash
+import plotly.graph_objects as go
+import webbrowser
 from dash import dcc, html
 from dash.dependencies import Input, Output
-import webbrowser
+from setting.map_layout import MapLayout
 
-# 📂 JSON ファイルを読み込む
-with open("app_list.json", "r", encoding="utf-8") as f:
+
+layout = MapLayout()
+
+# サービスファイルの読み込み
+with open('app_list.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
+df = pd.DataFrame(data["services"])
 
-df = pd.DataFrame(data["tools"])
-
-# 📊 散布図を作成
-fig = px.scatter(df, x="X", y="Y", text="name", hover_data=["url"])
-fig.update_traces(textposition="top center", marker=dict(size=12, color="blue"))
+# mapping_matrixの作成
+fig = go.Figure(layout=layout.set_layout())
+fig.add_trace(layout.set_scatter(df))
 
 # 🌐 Dash アプリを作成
 app = dash.Dash(__name__)
