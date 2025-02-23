@@ -2,7 +2,7 @@
 
 医療系サービスの収集および分類
 
-![マッピングマトリクス](images/med_app_scatter.png)
+![マッピングマトリクス](/images/med_app_scatter.png)
 
 ### 目的
 
