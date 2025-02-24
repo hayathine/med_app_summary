@@ -2,7 +2,7 @@ name: LLM Service Analysis
 
 on:
   pull_request:
-    branches: [main, develop]
+    branches: [main, develop,debug]
     types: [opened, reopened, synchronize]
 
 
@@ -17,6 +17,10 @@ jobs:
         id: pr_body
         run: |
           BODY=$(cat $GITHUB_EVENT_PATH | jq -r '.pull_request.body')
+        if [ -z "$BODY" ]; then
+          echo "Pull request body is empty. Exiting."
+          exit 1
+        fi
           echo "BODY=$BODY" >> $GITHUB_ENV # 環境変数として設定
 
       - name: Extract Service Info from Body
