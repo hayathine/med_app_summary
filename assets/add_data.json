@@ -1,28 +1,26 @@
 {
-    "services": {
-        "services": [
-            {
-                "name": "\u30a6\u30a3\u30ba\u30a6\u30a7\u30eb\u30cd\u30b9",
-                "X": -40,
-                "Y": -40,
-                "url": "https://www.withwellness.com/pr/",
-                "category": "\u5065\u5eb7\u7ba1\u7406",
-                "description": "\u84c4\u7a4d\u3055\u308c\u305f\u5065\u5eb7\u30c7\u30fc\u30bf\u304b\u3089\u3001\u3054\u81ea\u8eab\u3084\u3054\u5bb6\u65cf\u306e\u5065\u5eb7\u72b6\u614b\u3092\u628a\u63e1\u3067\u304d\u307e\u3059\u3002\u3055\u3089\u306b\u5065\u5eb7\u7dad\u6301\u306e\u305f\u3081\u306e\u3054\u63d0\u6848\u3001\u304a\u624b\u4f1d\u3044\u3082\u3044\u305f\u3057\u307e\u3059\u3002",
-                "type": "\u5546\u7528",
-                "target": "\u4e00\u822c\u30e6\u30fc\u30b6\u30fc"
-            },
-            {
-                "name": "te",
-                "url": " File \"C:\\Users\\gwsgs\\workSpace\\med_app_summary\\src\\use_dash.py\", line 78, in display_click_data     existing_data.append(new_data)     ^^^^^^^^^^^^^^^^^^^^ AttributeError: 'dict' object has no attribute 'append' 127.0.0.1 - - [24/Feb/2025 12:23:30] \"POST /_dash-update-component HTTP/1.1\" 500 -"
-            },
-            {
-                "name": "re",
-                "url": "https://karauri.net/2432/#google_vignette"
-            },
-            {
-                "name": "53",
-                "url": "https://karauri.net/2432/#google_vignette"
-            }
-        ]
-    }
+  "test": {
+    "services": [
+      {
+        "name": "\u30a6\u30a3\u30ba\u30a6\u30a7\u30eb\u30cd\u30b9",
+        "url": "https://www.withwellness.com/pr/"
+      },
+      {
+        "name": "te",
+        "url": " File \"C:\\Users\\gwsgs\\workSpace\\med_app_summary\\src\\use_dash.py\", line 78, in display_click_data     existing_data.append(new_data)     ^^^^^^^^^^^^^^^^^^^^ AttributeError: 'dict' object has no attribute 'append' 127.0.0.1 - - [24/Feb/2025 12:23:30] \"POST /_dash-update-component HTTP/1.1\" 500 -"
+      },
+      {
+        "name": "re",
+        "url": "https://karauri.net/2432/#google_vignette"
+      },
+      {
+        "name": "53",
+        "url": "https://karauri.net/2432/#google_vignette"
+      },
+      {
+        "name": "\uff46\uff53",
+        "url": "\u3075\u3047"
+      }
+    ]
+  }
 }
