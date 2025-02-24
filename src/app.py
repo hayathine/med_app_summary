@@ -19,5 +19,5 @@ fig.add_trace(layout.set_scatter(df))
 fig.show()
 #%% 
 # PNGファイルを作成
-# fig.write_image("images/med_app_scatter.png",engine='orca')
+fig.write_image("images/med_app_scatter.png",engine='orca')
 
