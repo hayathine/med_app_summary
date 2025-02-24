@@ -1,24 +1,14 @@
 {
-  "services": [
-    {
-      "name": "\u30a6\u30a3\u30ba\u30a6\u30a7\u30eb\u30cd\u30b9",
-      "url": "https://www.withwellness.com/pr/"
-    },
-    {
-      "name": "te",
-      "url": " File \"C:\\Users\\gwsgs\\workSpace\\med_app_summary\\src\\use_dash.py\", line 78, in display_click_data     existing_data.append(new_data)     ^^^^^^^^^^^^^^^^^^^^ AttributeError: 'dict' object has no attribute 'append' 127.0.0.1 - - [24/Feb/2025 12:23:30] \"POST /_dash-update-component HTTP/1.1\" 500 -"
-    },
-    {
-      "name": "re",
-      "url": "https://karauri.net/2432/#google_vignette"
-    },
-    {
-      "name": "53",
-      "url": "https://karauri.net/2432/#google_vignette"
-    },
-    {
-      "name": "\u3075\u3041",
-      "url": "https://plotly.com/python/marker-style/"
-    }
-  ]
+  "services": {
+    "services": [
+      {
+        "name": "\u30a6\u30a3\u30ba\u30a6\u30a7\u30eb\u30cd\u30b9",
+        "url": "https://www.withwellness.com/pr/"
+      },
+      {
+        "name": "\u3075\u3047",
+        "url": "https://plotly.com/python/marker-style/"
+      }
+    ]
+  }
 }
