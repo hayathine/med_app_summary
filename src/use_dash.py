@@ -82,7 +82,7 @@ def display_click_data(clickData, n_clicks, name_input, url_input):
                 repo.update_file(
                     contents.path,
                     "Update add_data.json",
-                    json.dumps({"services":existing_data}, indent=2),
+                    json.dumps(existing_data, indent=2),
                     contents.sha,
                     branch="gh-pages",
                 )
