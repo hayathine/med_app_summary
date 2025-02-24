@@ -106,6 +106,7 @@ def display_click_data(clickData, n_clicks, name_input, url_input):
                 print(f"Pull request created: {pr.html_url}")
             except Exception as e:
                 return f"An error occurred: {e}"
+            fig.add_trace(layout.set_scatter(df))
     return fig
 
 
