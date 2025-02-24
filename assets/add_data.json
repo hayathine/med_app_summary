@@ -1,14 +1,14 @@
 {
+  "services": {
     "services": [
-        {
-            "name": "ウィズウェルネス",
-            "X": -40,
-            "Y": -40,
-            "url": "https://www.withwellness.com/pr/",
-            "category": "健康管理",
-            "description": "蓄積された健康データから、ご自身やご家族の健康状態を把握できます。さらに健康維持のためのご提案、お手伝いもいたします。",
-            "type": "商用",
-            "target": "一般ユーザー"
-        }
+      {
+        "name": "\u30a6\u30a3\u30ba\u30a6\u30a7\u30eb\u30cd\u30b9",
+        "url": "https://www.withwellness.com/pr/"
+      },
+      {
+        "name": "\u3075\u3047",
+        "url": "https://plotly.com/python/marker-style/"
+      }
     ]
+  }
 }
