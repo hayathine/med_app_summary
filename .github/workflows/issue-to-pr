@@ -1,0 +1,55 @@
+name: Issue to Pull Request
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Convert issue to JSON
+        id: convert
+        run: node convert-issue.js "${{ toJson(github.event.issue) }}"
+
+      - name: Create branch or checkout if exists
+        run: |
+          git show-ref --verify --quiet refs/heads/add_new_data && git checkout add_new_data || git checkout -b add_new_data
+
+      - name: Configure Git user
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "${{ github.event.issue.user.login }}"
+          
+      - name: Commit changes
+        run: |
+          git add assets/issue-${{ github.event.issue.number }}.json
+          git commit -m "Add issue #${{ github.event.issue.number }} as JSON"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: add_new_data
+          force: true
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Add issue #${{ github.event.issue.number }} as JSON"
+          title: "Issue #${{ github.event.issue.number }} as JSON"
+          body: "This pull request automatically converts issue #${{ github.event.issue.number }} to a JSON file."
+          branch: add_new_data
+          base: main # or your default branch
