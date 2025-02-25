@@ -1,11 +1,12 @@
 name: Issue to Pull Request
 
 on:
-  issues:
-    types: [opened]
+  issue_comment:
+    types: [created]
 
 jobs:
   create_pr:
+    if: !${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -21,7 +22,9 @@ jobs:
 
       - name: Convert issue to JSON
         id: convert
-        run: node convert-issue.js "${{ toJson(github.event.issue) }}"
+        run: |
+          node convert-issue.js "${{ toJson(github.event.issue) }}"
+          echo "issue_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
 
       - name: Create branch or checkout if exists
         run: |
@@ -30,12 +33,12 @@ jobs:
       - name: Configure Git user
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "${{ github.event.issue.user.login }}"
-          
+          git config --local user.name "${{ github.event.comment.user.login }}"
+
       - name: Commit changes
         run: |
-          git add assets/issue-${{ github.event.issue.number }}.json
-          git commit -m "Add issue #${{ github.event.issue.number }} as JSON"
+          git add assets/issue-${{ steps.convert.outputs.issue_number }}.json
+          git commit -m "Add issue #${{ steps.convert.outputs.issue_number }} as JSON"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
@@ -48,8 +51,8 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Add issue #${{ github.event.issue.number }} as JSON"
-          title: "Issue #${{ github.event.issue.number }} as JSON"
-          body: "This pull request automatically converts issue #${{ github.event.issue.number }} to a JSON file."
+          commit-message: "Add issue #${{ steps.convert.outputs.issue_number }} as JSON"
+          title: "Issue #${{ steps.convert.outputs.issue_number }} as JSON"
+          body: "This pull request automatically converts issue #${{ steps.convert.outputs.issue_number }} to a JSON file."
           branch: add_new_data
-          base: main # or your default branch
+          base: develop
