@@ -7,7 +7,8 @@ const commentBody = process.argv[2];
 console.log("commentBody:", commentBody);
 console.log( 'typeof ' + (typeof commentBody) );
 const unescapedBody = commentBody.replace(/\\\\/g, '\\');
-const commentData = {};
+console.log("unescapedBody:", unescapedBody);
+var commentData = {};
 try {
     commentData = {
         body: JSON.parse(unescapedBody),
