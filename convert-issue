@@ -1,0 +1,8 @@
+const fs = require('fs');
+const path = require('path');
+
+const issueJson = JSON.parse(process.argv[2]);
+const fileName = `issue-${issueJson.number}.json`;
+const filePath = path.join('assets', fileName); // assetsフォルダへのパス
+
+fs.writeFileSync(filePath, JSON.stringify(issueJson, null, 2));
