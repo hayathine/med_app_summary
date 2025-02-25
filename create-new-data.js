@@ -6,8 +6,8 @@ const body = process.argv[2].split('\n');
 console.log(body);
 const id = process.argv[3];
 console.log(id);
-const name = body[0].match( /'(.*)'/);
-const url = body[1].match( /'(.*)'/);
+const name = body[0].match(/'(.*)'/);
+const url = body[1].match(/'(.*)'/);
 console.log(name);
 console.log(url);
 // name のバリデーション
