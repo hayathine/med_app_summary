@@ -1,0 +1,1 @@
+["hoge","https://triple-underscore.github.io/urlpattern-ja.html"]
