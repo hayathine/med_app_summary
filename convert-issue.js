@@ -6,12 +6,12 @@ console.log( 'typeof ' + (typeof issueJson) );
 const commentBody = process.argv[2];
 console.log("commentBody:", commentBody);
 console.log( 'typeof ' + (typeof commentBody) );
-const unescapedBody = commentBody.replace(/\\\\/g, '\\');
-console.log("unescapedBody:", unescapedBody);
+const formattedString = issueJsonString.replace(/\\n/g, '').replace(/"/g, '');
+console.log("unescapedBody:", formattedString);
 var commentData = {};
 try {
     commentData = {
-        body: JSON.parse(unescapedBody),
+        body: JSON.parse(formattedString),
     };
 
 } catch (error) {
