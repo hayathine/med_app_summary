@@ -23,6 +23,8 @@ jobs:
       - name: Convert issue to JSON
         id: convert
         run: |
+          echo "github.event.issue: ${{ github.event.issue }}"
+          echo "toJson output: ${{ toJson(github.event.issue) }}"
           node convert-issue.js "${{ toJson(github.event.issue) }}"
           echo "issue_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
 
