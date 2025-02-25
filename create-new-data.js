@@ -9,5 +9,5 @@ const id = process.argv[2];
 
 const fileName = `add-new-data-${id}.txt`;
 const filePath = path.join('assets', fileName); // assetsフォルダへのパス
-console(process.argv);
+console.log(process.argv);
 fs.writeFileSync(filePath, body);
