@@ -23,9 +23,9 @@ jobs:
       - name: Convert issue to JSON
         id: convert
         run: |
-          echo "github.event.issue: ${{ github.event.comment }}"
-          echo "toJson output: ${{ toJson(github.event.comment) }}"
-          node convert-issue.js "{{$github.event.comment.body}}"
+          echo "github.event.issue: ${{ github.event.comment.body }}"
+          echo "toJson output: ${{ toJson(github.event.comment.body) }}"
+          node convert-issue.js echo "{{$github.event.comment.body}}"
           echo "issue_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
 
       - name: Create branch or checkout if exists
