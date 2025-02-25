@@ -8,6 +8,8 @@ const id = process.argv[3];
 console.log(id);
 const name = body[0].match( /'(.*)'/);
 const url = body[1].match( /'(.*)'/);
+console.log(name);
+console.log(url);
 // name のバリデーション
 if (name.length > 100) {
     console.error("Error: name must be 100 characters or less.");
