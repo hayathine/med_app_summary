@@ -39,8 +39,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add assets/issue-${{ steps.convert.outputs.issue_number }}.json
-          git commit -m "Add issue #${{ steps.convert.outputs.issue_number }} as JSON"
+          git add assets/issue-${{ github.event.comment.id }}.json
+          git commit -m "Add issue #${{ github.event.comment.id }} as JSON"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
