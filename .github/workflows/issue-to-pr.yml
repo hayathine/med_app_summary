@@ -20,13 +20,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Convert issue to JSON
-        id: convert
+      - name: create data txt
+        id: create
         run: |
-          echo "github.event.issue: ${{ github.event.comment.body }}"
-          echo "toJson output: ${{ toJson(github.event.comment.body) }}"
-          node convert-issue.js "$(echo '${{ toJson(github.event.comment.body) }}')"
-          echo "issue_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
+          node create-new-data.js "${{ github.event.comment.body }}" ${{ github.event.comment.id }}
 
       - name: Create branch or checkout if exists
         run: |
@@ -39,8 +36,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add assets/issue-${{ github.event.comment.id }}.json
-          git commit -m "Add issue #${{ github.event.comment.id }} as JSON"
+          git add assets/add_data_${{ github.event.comment.id }}.txt
+          git commit -m "Add issue #${{ github.event.comment.id }} as txt"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
@@ -53,8 +50,8 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Add issue #${{ steps.convert.outputs.issue_number }} as JSON"
-          title: "Issue #${{ steps.convert.outputs.issue_number }} as JSON"
-          body: "This pull request automatically converts issue #${{ steps.convert.outputs.issue_number }} to a JSON file."
+          commit-message: "Aadd-data ${{ github.event.comment.id }} as txt"
+          title: "Aadd-data ${{ github.event.comment.id }} as txt"
+          body: "This pull request automatically new data #${{ github.event.comment.id }} to a txt file."
           branch: add_new_data
           base: develop
