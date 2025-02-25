@@ -36,7 +36,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          git add assets/add_data_${{ github.event.comment.id }}.txt
+          git add assets/add-new-data-${{ github.event.comment.id }}.txt
           git commit -m "Add issue #${{ github.event.comment.id }} as txt"
 
       - name: Push changes
