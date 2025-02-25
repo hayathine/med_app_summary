@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log("issueJson:", process.argv);
+console.log("issueJson:", process.argv[2]);
 const commentBody = process.argv;
 const unescapedBody = commentBody.replace(/\\\\/g, '\\');
 
