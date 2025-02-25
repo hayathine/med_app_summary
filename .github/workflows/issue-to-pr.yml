@@ -46,12 +46,3 @@ jobs:
           branch: add_new_data
           force: true
 
-      - name: Create pull request
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Aadd-data ${{ github.event.comment.id }} as txt"
-          title: "Aadd-data ${{ github.event.comment.id }} as txt"
-          body: "This pull request automatically new data #${{ github.event.comment.id }} to a txt file."
-          branch: add_new_data
-          base: develop
