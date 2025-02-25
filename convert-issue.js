@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const issueJson = JSON.parse(process.argv[2]);
+console.log("issueJson:", process.argv); 
+const issueJson = JSON.parse(process.argv);
 const fileName = `issue-${issueJson.number}.json`;
 const filePath = path.join('assets', fileName); // assetsフォルダへのパス
 
