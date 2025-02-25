@@ -4,8 +4,9 @@ const path = require('path');
 const body = process.argv[2].split('\n');
 console.log(body);
 const id = process.argv[3];
-const name = body[0].match(/name: (.*)/);
-const url = body[1].match(/url: (.*)/);
+console.log(id);
+const name = body[0].match( /'(.*)'/);
+const url = body[1].match( /'(.*)'/);
 // name のバリデーション
 if (name.length > 100) {
     console.error("Error: name must be 100 characters or less.");
