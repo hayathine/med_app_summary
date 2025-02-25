@@ -6,7 +6,7 @@ console.log( 'typeof ' + (typeof issueJson) );
 const commentBody = process.argv[2];
 console.log("commentBody:", commentBody);
 console.log( 'typeof ' + (typeof commentBody) );
-const formattedString = commentBody.replace(/\\n/g, '').replace(/"/g, '').replace(/\\\\/g, '');
+const formattedString = commentBody.replace(/\\n/g, '').replace(/"/g, '').replace(/\\/g, '');
 console.log("unescapedBody:", formattedString);
 var commentData = {};
 try {
