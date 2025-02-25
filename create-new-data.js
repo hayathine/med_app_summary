@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+const urlPattern = /^https?:\/\//;
 const body = process.argv[2].split('\n');
 console.log(body);
 const id = process.argv[3];
@@ -13,7 +14,7 @@ if (name.length > 100) {
     process.exit(1);
 }
 // url のバリデーション
-if (!url.test(url) || url.length > 200) {
+if (!urlPattern.test(url) || url.length > 200) {
     console.error("Error: url must be a valid http(s) URL and 200 characters or less.");
     process.exit(1);
 }
