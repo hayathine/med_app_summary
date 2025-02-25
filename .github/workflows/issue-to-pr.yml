@@ -1,0 +1,48 @@
+name: Issue to Pull Request
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  create_pr:
+    if: github.event.issue.number == 10
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: create data txt
+        id: create
+        run: |
+          node create-new-data.js "${{ github.event.comment.body }}" ${{ github.event.comment.id }}
+
+      - name: Create branch or checkout if exists
+        run: |
+          git show-ref --verify --quiet refs/heads/add_new_data && git checkout add_new_data || git checkout -b add_new_data
+
+      - name: Configure Git user
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "${{ github.event.comment.user.login }}"
+
+      - name: Commit changes
+        run: |
+          git add assets/add-new-data-${{ github.event.comment.id }}.txt
+          git commit -m "Add issue #${{ github.event.comment.id }} as txt"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: add_new_data
+          force: true
+
